@@ -1,30 +1,30 @@
-# fe
+# readme generator
     
   ## Description
-  fe
+  generates readme
       
+  ![License](https://img.shields.io/badge/License-MPL_2.0-blue.svg)
   ## Table of Contents
-  fe
+  getting there
   
   ## Installation
-  fe
+  none
   
   ## Usage
-  fe
+  follow the white rabbit
   
   ## License
-  ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
-  [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
+  Licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0) license.
   
   ## Contributing
-  fe
+  need to think about it
   
   ## Tests
-  fe
+  in progress
   
   ## Questions
-  [My GitHub Profile](https://github.com/ati a kiraly)
+  [My GitHub Profile](https://github.com/Attila)
   
-  If you need to reach me you can do so by sending an email to fe
+  If you need to reach me you can do so by sending an email to attila@mail.com
   
   
