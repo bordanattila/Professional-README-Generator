@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./Develop/utils/generateMarkdown");
 // import inquirer from "inquirer";
 // import fs from "fs";
 const fileName = "README.md"
@@ -14,47 +15,17 @@ const questions = [
     "Create the table of contents. ", 
     "What is the installation guide for the project? ", 
     "Provide instructions and examples for use. ", 
-    "License", 
-    "Contributing", 
-    "Tests", 
-    "Questions"
+    "Choose the license", 
+    "How can others contribute to the project? ", 
+    "Go the extra mile and write tests for your application", 
+    // "Questions"
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-
-    fs.writeFile(fileName, 
-    `# ${data.title}
+function writeToFile(fileName, answers) {
     
-## Description
-${data.description}
-    
-## Table of Contents
-${data.contents}
 
-## Installation
-${data.installation}
-
-## Usage
-${data.usage}
-
-## License
-${data.license}
-
-## Contributing
-${data.contributing}
-
-## Tests
-${data.tests}
-
-## Questions
-[My GitHub Profile](https://github.com/${data.username})
-
-${data.questions}
-
-If you need to reach me you can do so by sending an email to ${data.email}
-
-`, (error, file) =>
+    fs.writeFile(fileName, generateMarkdown(answers), (error, file) =>
     error ? console.log('File not saved!')
     : console.log('Success!')
     )
@@ -100,10 +71,10 @@ function init() {
                         name: "usage",
                     },
                     {
-                        type: "input",
+                        type: "list",
                         message: questions[7],
-                        name: "licence",
-                        
+                        choices: ["GNU AGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License"],
+                        name: "license",
                     },
                     {
                         type: "input",
@@ -114,11 +85,6 @@ function init() {
                         type: "input",
                         message: questions[9],
                         name: "tests",
-                    },
-                    {
-                        type: "input",
-                        message: questions[10],
-                        name: "questions",
                     },
             ])
             .then ((projecttitle) => {
