@@ -2,8 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./Develop/utils/generateMarkdown");
-// import inquirer from "inquirer";
-// import fs from "fs";
+
 const fileName = "README.md"
 
 // TODO: Create an array of questions for user input
@@ -11,14 +10,12 @@ const questions = [
     "What is your GitHub username? ",
     "what is your email address? ",
     "What is the title of the project? ", 
-    "Enter the description of the project. ", 
-    "Create the table of contents. ", 
+    "Enter the description of the project. ",  
     "What is the installation guide for the project? ", 
     "Provide instructions and examples for use. ", 
     "Choose the license", 
     "How can others contribute to the project? ", 
     "Go the extra mile and write tests for your application", 
-    // "Questions"
 ];
 
 // TODO: Create a function to write README file
@@ -58,32 +55,27 @@ function init() {
                     {
                         type: "input",
                         message: questions[4],
-                        name: "contents",
-                    },
-                    {
-                        type: "input",
-                        message: questions[5],
                         name: "installation",
                     },
                     {
                         type: "input",
-                        message: questions[6],
+                        message: questions[5],
                         name: "usage",
                     },
                     {
                         type: "list",
-                        message: questions[7],
-                        choices: ["GNU AGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License"],
+                        message: questions[6],
+                        choices: ["", "GNU AGPLv3", "Mozilla Public License 2.0", "Apache License 2.0", "MIT License"],
                         name: "license",
                     },
                     {
                         type: "input",
-                        message: questions[8],
+                        message: questions[7],
                         name: "contributing",
                     },
                     {
                         type: "input",
-                        message: questions[9],
+                        message: questions[8],
                         name: "tests",
                     },
             ])

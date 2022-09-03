@@ -35,7 +35,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license) {
     const link = renderLicenseLink(license)
-    return link
+    return ` Licensed under the ${link} license.`
   } else {
     return "";
   }
@@ -51,8 +51,13 @@ function generateMarkdown(data) {
       
   ${renderLicenseBadge(data.license)}
   ## Table of Contents
-  ${data.contents}
-  
+  [Installation](#Installation)\n
+  [Usage](#Usage)\n
+  [License](#License)\n
+  [Constributing](#Contributing)\n
+  [Tests](#Tests)\n
+  [Questions](#Questions)\n
+
   ## Installation
   ${data.installation}
   
@@ -60,7 +65,7 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ## License
-  Licensed under the ${renderLicenseSection(data.license)} license.
+  ${renderLicenseSection(data.license)}
   
   ## Contributing
   ${data.contributing}

@@ -1,23 +1,34 @@
-# readme generator
+# Attila a kiraly
     
   ## Description
-  generates readme
+  this is a handy readme generator
       
   ![License](https://img.shields.io/badge/License-MPL_2.0-blue.svg)
   ## Table of Contents
-  getting there
-  
+  [Installation](#Installation)
+
+  [Usage](#Usage)
+
+  [License](#License)
+
+  [Constributing](#Contributing)
+
+  [Tests](#Tests)
+
+  [Questions](#Questions)
+
+
   ## Installation
-  none
+  npm install
   
   ## Usage
-  follow the white rabbit
+  run index.js
   
   ## License
-  Licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0) license.
+   Licensed under the [Mozilla Public License 2.0](https://opensource.org/licenses/MPL-2.0) license.
   
   ## Contributing
-  need to think about it
+  fork the repo
   
   ## Tests
   in progress
